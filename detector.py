@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 import numpy as np
 import pandas as pd
+import logging
 from sklearn.ensemble import IsolationForest
 from typing import Optional
+
+logger = logging.getLogger(__name__)
 
 
 class AnomalyDetector:
@@ -22,6 +25,7 @@ class AnomalyDetector:
         established baseline mean. Returns a Series of z-scores.
         """
         if std == 0:
+            logger.warning("Standard deviation is zero or NaN; returning neutral z-scores.")
             return pd.Series([0.0] * len(values))
         return (values - mean).abs() / std
 
@@ -51,40 +55,51 @@ class AnomalyDetector:
         baseline: dict,
         method: str = "both"
     ) -> pd.DataFrame:
+        
+        logger.info(f"Running anomaly detection using method='{method}' on {len(df)} rows.")
         result = df.copy()
 
-        # --- Z-score per channel ---
-        if method in ("zscore", "both"):
-            for col in numeric_cols:
-                stats = baseline.get(col)
-                if stats and stats["count"] >= 30:  # need enough history to trust baseline
-                    z_scores = self.zscore_flag(df[col], stats["mean"], stats["std"])
-                    result[f"{col}_zscore"] = z_scores.round(4)
-                    result[f"{col}_zscore_flag"] = z_scores > self.z_threshold
+        try:
+            # --- Z-score per channel ---
+            if method in ("zscore", "both"):
+                for col in numeric_cols:
+                    stats = baseline.get(col)
+                    if stats and stats["count"] >= 30:  # need enough history to trust baseline
+                        z_scores = self.zscore_flag(df[col], stats["mean"], stats["std"])
+                        result[f"{col}_zscore"] = z_scores.round(4)
+                        result[f"{col}_zscore_flag"] = z_scores > self.z_threshold
+                    else:
+                        # Not enough baseline history yet — flag as unknown
+                        logger.info(f"Baseline for '{col}' not mature (count < 30); skipping z-score.")
+                        result[f"{col}_zscore"] = None
+                        result[f"{col}_zscore_flag"] = None
+
+            # --- IsolationForest across all channels ---
+            if method in ("isolation", "both"):
+                labels, scores = self.isolation_forest_flag(df, numeric_cols)
+                result["if_label"] = labels          # -1 or 1
+                result["if_score"] = scores.round(4) # continuous anomaly score
+                result["if_flag"] = labels == -1
+
+            # --- Consensus flag: anomalous by at least one method ---
+            if method == "both":
+                zscore_flags = [
+                    result[f"{col}_zscore_flag"]
+                    for col in numeric_cols
+                    if f"{col}_zscore_flag" in result.columns
+                    and result[f"{col}_zscore_flag"].notna().any()
+                ]
+                if zscore_flags:
+                    any_zscore = pd.concat(zscore_flags, axis=1).any(axis=1)
+                    result["anomaly"] = any_zscore | result["if_flag"]
                 else:
-                    # Not enough baseline history yet — flag as unknown
-                    result[f"{col}_zscore"] = None
-                    result[f"{col}_zscore_flag"] = None
+                    result["anomaly"] = result["if_flag"]
 
-        # --- IsolationForest across all channels ---
-        if method in ("isolation", "both"):
-            labels, scores = self.isolation_forest_flag(df, numeric_cols)
-            result["if_label"] = labels          # -1 or 1
-            result["if_score"] = scores.round(4) # continuous anomaly score
-            result["if_flag"] = labels == -1
+            logger.info("Anomaly detection completed successfully.")
+            return result
+        except Exception as e:
+            logger.error(f"Fatal error during anomaly detection: {e}")
 
-        # --- Consensus flag: anomalous by at least one method ---
-        if method == "both":
-            zscore_flags = [
-                result[f"{col}_zscore_flag"]
-                for col in numeric_cols
-                if f"{col}_zscore_flag" in result.columns
-                and result[f"{col}_zscore_flag"].notna().any()
-            ]
-            if zscore_flags:
-                any_zscore = pd.concat(zscore_flags, axis=1).any(axis=1)
-                result["anomaly"] = any_zscore | result["if_flag"]
-            else:
-                result["anomaly"] = result["if_flag"]
-
-        return result
+            # Fail safely: return original dataframe with anomaly column
+            result["anomaly"] = False
+            return result
