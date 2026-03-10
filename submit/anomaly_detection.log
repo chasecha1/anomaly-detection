@@ -1,0 +1,692 @@
+2026-03-10 22:27:41,992 - app - INFO - Application starting with bucket: anomaly-detection-692859947454-us-east-1
+2026-03-10 22:27:42,367 - uvicorn.error - INFO - Started server process [2854]
+2026-03-10 22:27:42,368 - uvicorn.error - INFO - Waiting for application startup.
+2026-03-10 22:27:42,368 - uvicorn.error - INFO - Application startup complete.
+2026-03-10 22:27:42,370 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-03-10 22:28:08,478 - app - INFO - SNS message received. Type: SubscriptionConfirmation
+2026-03-10 22:28:08,478 - app - INFO - Confirming SNS subscription.
+2026-03-10 22:28:08,673 - app - INFO - SNS subscription confirmed.
+2026-03-10 22:31:31,262 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:31:31,263 - app - INFO - S3 event received for object: raw/sensors_20260310T223130.csv
+2026-03-10 22:31:31,263 - app - INFO - Queueing processing task for file: raw/sensors_20260310T223130.csv
+2026-03-10 22:31:31,372 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:31:31,444 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:31:31,622 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:31:31,660 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T223130.csv
+2026-03-10 22:31:31,693 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:31:31,694 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:31:31,725 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:31:31,753 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T223130_summary.json
+2026-03-10 22:32:31,837 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:32:31,837 - app - INFO - S3 event received for object: raw/sensors_20260310T223230.csv
+2026-03-10 22:32:31,837 - app - INFO - Queueing processing task for file: raw/sensors_20260310T223230.csv
+2026-03-10 22:32:31,914 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:32:31,989 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:32:31,991 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:32:32,149 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:32:32,179 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T223230.csv
+2026-03-10 22:32:32,206 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:32:32,206 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:32:32,237 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:32:32,265 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T223230_summary.json
+2026-03-10 22:32:55,719 - app - INFO - SNS message received. Type: SubscriptionConfirmation
+2026-03-10 22:32:55,719 - app - INFO - Confirming SNS subscription.
+2026-03-10 22:32:55,786 - app - INFO - SNS subscription confirmed.
+2026-03-10 22:33:32,168 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:33:32,168 - app - INFO - S3 event received for object: raw/sensors_20260310T223330.csv
+2026-03-10 22:33:32,168 - app - INFO - Queueing processing task for file: raw/sensors_20260310T223330.csv
+2026-03-10 22:33:32,244 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:33:32,322 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:33:32,323 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:33:32,482 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:33:32,517 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T223330.csv
+2026-03-10 22:33:32,542 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:33:32,542 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:33:32,573 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:33:32,606 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T223330_summary.json
+2026-03-10 22:34:31,897 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:34:31,898 - app - INFO - S3 event received for object: raw/sensors_20260310T223431.csv
+2026-03-10 22:34:31,898 - app - INFO - Queueing processing task for file: raw/sensors_20260310T223431.csv
+2026-03-10 22:34:31,974 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:34:32,060 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:34:32,061 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:34:32,219 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:34:32,250 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T223431.csv
+2026-03-10 22:34:32,283 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:34:32,283 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:34:32,314 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:34:32,377 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T223431_summary.json
+2026-03-10 22:35:32,358 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:35:32,358 - app - INFO - S3 event received for object: raw/sensors_20260310T223531.csv
+2026-03-10 22:35:32,358 - app - INFO - Queueing processing task for file: raw/sensors_20260310T223531.csv
+2026-03-10 22:35:32,437 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:35:32,512 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:35:32,513 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:35:32,671 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:35:32,750 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T223531.csv
+2026-03-10 22:35:32,781 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:35:32,781 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:35:32,815 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:35:32,855 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T223531_summary.json
+2026-03-10 22:36:31,830 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:36:31,830 - app - INFO - S3 event received for object: raw/sensors_20260310T223631.csv
+2026-03-10 22:36:31,830 - app - INFO - Queueing processing task for file: raw/sensors_20260310T223631.csv
+2026-03-10 22:36:31,902 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:36:31,977 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:36:31,978 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:36:32,137 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:36:32,187 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T223631.csv
+2026-03-10 22:36:32,223 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:36:32,223 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:36:32,254 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:36:32,281 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T223631_summary.json
+2026-03-10 22:37:32,274 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:37:32,274 - app - INFO - S3 event received for object: raw/sensors_20260310T223731.csv
+2026-03-10 22:37:32,274 - app - INFO - Queueing processing task for file: raw/sensors_20260310T223731.csv
+2026-03-10 22:37:32,343 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:37:32,431 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:37:32,432 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:37:32,590 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:37:32,640 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T223731.csv
+2026-03-10 22:37:32,673 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:37:32,673 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:37:32,702 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:37:32,729 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T223731_summary.json
+2026-03-10 22:38:32,591 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:38:32,591 - app - INFO - S3 event received for object: raw/sensors_20260310T223831.csv
+2026-03-10 22:38:32,591 - app - INFO - Queueing processing task for file: raw/sensors_20260310T223831.csv
+2026-03-10 22:38:32,672 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:38:32,794 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:38:32,795 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:38:32,949 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:38:32,995 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T223831.csv
+2026-03-10 22:38:33,028 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:38:33,028 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:38:33,066 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:38:33,104 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T223831_summary.json
+2026-03-10 22:39:32,361 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:39:32,361 - app - INFO - S3 event received for object: raw/sensors_20260310T223931.csv
+2026-03-10 22:39:32,361 - app - INFO - Queueing processing task for file: raw/sensors_20260310T223931.csv
+2026-03-10 22:39:32,436 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:39:32,509 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:39:32,510 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:39:32,664 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:39:32,698 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T223931.csv
+2026-03-10 22:39:32,726 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:39:32,726 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:39:32,752 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:39:32,801 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T223931_summary.json
+2026-03-10 22:40:32,595 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:40:32,595 - app - INFO - S3 event received for object: raw/sensors_20260310T224031.csv
+2026-03-10 22:40:32,596 - app - INFO - Queueing processing task for file: raw/sensors_20260310T224031.csv
+2026-03-10 22:40:32,673 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:40:32,749 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:40:32,750 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:40:32,910 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:40:32,940 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T224031.csv
+2026-03-10 22:40:32,973 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:40:32,973 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:40:33,008 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:40:33,037 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T224031_summary.json
+2026-03-10 22:41:32,369 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:41:32,369 - app - INFO - S3 event received for object: raw/sensors_20260310T224131.csv
+2026-03-10 22:41:32,369 - app - INFO - Queueing processing task for file: raw/sensors_20260310T224131.csv
+2026-03-10 22:41:32,438 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:41:32,527 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:41:32,528 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:41:32,687 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:41:32,719 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T224131.csv
+2026-03-10 22:41:32,750 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:41:32,750 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:41:32,780 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:41:32,805 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T224131_summary.json
+2026-03-10 22:42:32,777 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:42:32,777 - app - INFO - S3 event received for object: raw/sensors_20260310T224231.csv
+2026-03-10 22:42:32,777 - app - INFO - Queueing processing task for file: raw/sensors_20260310T224231.csv
+2026-03-10 22:42:32,845 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:42:32,919 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:42:32,920 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:42:33,079 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:42:33,264 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T224231.csv
+2026-03-10 22:42:33,299 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:42:33,299 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:42:33,353 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:42:33,383 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T224231_summary.json
+2026-03-10 22:43:33,199 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:43:33,199 - app - INFO - S3 event received for object: raw/sensors_20260310T224331.csv
+2026-03-10 22:43:33,199 - app - INFO - Queueing processing task for file: raw/sensors_20260310T224331.csv
+2026-03-10 22:43:33,276 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:43:33,361 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:43:33,363 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:43:33,520 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:43:33,553 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T224331.csv
+2026-03-10 22:43:33,626 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:43:33,626 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:43:33,656 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:43:33,684 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T224331_summary.json
+2026-03-10 22:44:32,881 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:44:32,881 - app - INFO - S3 event received for object: raw/sensors_20260310T224431.csv
+2026-03-10 22:44:32,881 - app - INFO - Queueing processing task for file: raw/sensors_20260310T224431.csv
+2026-03-10 22:44:32,951 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:44:33,071 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:44:33,073 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:44:33,228 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:44:33,256 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T224431.csv
+2026-03-10 22:44:33,287 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:44:33,287 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:44:33,320 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:44:33,347 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T224431_summary.json
+2026-03-10 22:45:33,228 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:45:33,228 - app - INFO - S3 event received for object: raw/sensors_20260310T224532.csv
+2026-03-10 22:45:33,228 - app - INFO - Queueing processing task for file: raw/sensors_20260310T224532.csv
+2026-03-10 22:45:33,307 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:45:33,395 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:45:33,397 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:45:33,555 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:45:33,587 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T224532.csv
+2026-03-10 22:45:33,616 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:45:33,616 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:45:33,653 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:45:33,683 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T224532_summary.json
+2026-03-10 22:46:32,923 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:46:32,923 - app - INFO - S3 event received for object: raw/sensors_20260310T224632.csv
+2026-03-10 22:46:32,924 - app - INFO - Queueing processing task for file: raw/sensors_20260310T224632.csv
+2026-03-10 22:46:32,999 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:46:33,094 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:46:33,095 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:46:33,255 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:46:33,283 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T224632.csv
+2026-03-10 22:46:33,310 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:46:33,310 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:46:33,338 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:46:33,364 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T224632_summary.json
+2026-03-10 22:47:33,340 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:47:33,340 - app - INFO - S3 event received for object: raw/sensors_20260310T224732.csv
+2026-03-10 22:47:33,340 - app - INFO - Queueing processing task for file: raw/sensors_20260310T224732.csv
+2026-03-10 22:47:33,417 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:47:33,496 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:47:33,497 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:47:33,655 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:47:33,710 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T224732.csv
+2026-03-10 22:47:33,741 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:47:33,741 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:47:33,780 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:47:33,820 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T224732_summary.json
+2026-03-10 22:48:32,795 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:48:32,795 - app - INFO - S3 event received for object: raw/sensors_20260310T224832.csv
+2026-03-10 22:48:32,795 - app - INFO - Queueing processing task for file: raw/sensors_20260310T224832.csv
+2026-03-10 22:48:32,872 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:48:32,956 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:48:32,957 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:48:33,116 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:48:33,161 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T224832.csv
+2026-03-10 22:48:33,189 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:48:33,189 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:48:33,220 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:48:33,281 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T224832_summary.json
+2026-03-10 22:49:33,322 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:49:33,322 - app - INFO - S3 event received for object: raw/sensors_20260310T224932.csv
+2026-03-10 22:49:33,322 - app - INFO - Queueing processing task for file: raw/sensors_20260310T224932.csv
+2026-03-10 22:49:33,399 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:49:33,513 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:49:33,514 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:49:33,674 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:49:33,730 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T224932.csv
+2026-03-10 22:49:33,759 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:49:33,759 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:49:33,790 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:49:33,827 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T224932_summary.json
+2026-03-10 22:50:33,648 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:50:33,648 - app - INFO - S3 event received for object: raw/sensors_20260310T225032.csv
+2026-03-10 22:50:33,648 - app - INFO - Queueing processing task for file: raw/sensors_20260310T225032.csv
+2026-03-10 22:50:33,747 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:50:33,840 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:50:33,841 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:50:34,000 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:50:34,033 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T225032.csv
+2026-03-10 22:50:34,168 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:50:34,168 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:50:34,205 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:50:34,233 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T225032_summary.json
+2026-03-10 22:51:33,217 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:51:33,217 - app - INFO - S3 event received for object: raw/sensors_20260310T225132.csv
+2026-03-10 22:51:33,217 - app - INFO - Queueing processing task for file: raw/sensors_20260310T225132.csv
+2026-03-10 22:51:33,289 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:51:33,359 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:51:33,360 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:51:33,521 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:51:33,551 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T225132.csv
+2026-03-10 22:51:33,581 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:51:33,581 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:51:33,609 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:51:33,637 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T225132_summary.json
+2026-03-10 22:52:33,702 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:52:33,702 - app - INFO - S3 event received for object: raw/sensors_20260310T225232.csv
+2026-03-10 22:52:33,702 - app - INFO - Queueing processing task for file: raw/sensors_20260310T225232.csv
+2026-03-10 22:52:33,776 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:52:33,855 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:52:33,857 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:52:34,017 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:52:34,047 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T225232.csv
+2026-03-10 22:52:34,085 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:52:34,085 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:52:34,127 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:52:34,155 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T225232_summary.json
+2026-03-10 22:53:33,457 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:53:33,458 - app - INFO - S3 event received for object: raw/sensors_20260310T225332.csv
+2026-03-10 22:53:33,458 - app - INFO - Queueing processing task for file: raw/sensors_20260310T225332.csv
+2026-03-10 22:53:33,530 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:53:33,647 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:53:33,648 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:53:33,808 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:53:33,837 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T225332.csv
+2026-03-10 22:53:33,866 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:53:33,866 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:53:33,901 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:53:33,955 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T225332_summary.json
+2026-03-10 22:54:33,766 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:54:33,766 - app - INFO - S3 event received for object: raw/sensors_20260310T225432.csv
+2026-03-10 22:54:33,766 - app - INFO - Queueing processing task for file: raw/sensors_20260310T225432.csv
+2026-03-10 22:54:33,840 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:54:33,910 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:54:33,912 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:54:34,072 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:54:34,104 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T225432.csv
+2026-03-10 22:54:34,183 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:54:34,183 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:54:34,222 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:54:34,254 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T225432_summary.json
+2026-03-10 22:55:34,187 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:55:34,187 - app - INFO - S3 event received for object: raw/sensors_20260310T225532.csv
+2026-03-10 22:55:34,187 - app - INFO - Queueing processing task for file: raw/sensors_20260310T225532.csv
+2026-03-10 22:55:34,260 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:55:34,331 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:55:34,333 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:55:34,494 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:55:34,525 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T225532.csv
+2026-03-10 22:55:34,551 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:55:34,552 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:55:34,599 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:55:34,632 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T225532_summary.json
+2026-03-10 22:56:33,725 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:56:33,725 - app - INFO - S3 event received for object: raw/sensors_20260310T225632.csv
+2026-03-10 22:56:33,725 - app - INFO - Queueing processing task for file: raw/sensors_20260310T225632.csv
+2026-03-10 22:56:33,801 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:56:33,876 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:56:33,877 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:56:34,041 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:56:34,072 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T225632.csv
+2026-03-10 22:56:34,102 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:56:34,102 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:56:34,133 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:56:34,161 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T225632_summary.json
+2026-03-10 22:57:34,234 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:57:34,234 - app - INFO - S3 event received for object: raw/sensors_20260310T225733.csv
+2026-03-10 22:57:34,235 - app - INFO - Queueing processing task for file: raw/sensors_20260310T225733.csv
+2026-03-10 22:57:34,308 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:57:34,398 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:57:34,400 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:57:34,558 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:57:34,594 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T225733.csv
+2026-03-10 22:57:34,622 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:57:34,622 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:57:34,650 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:57:34,678 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T225733_summary.json
+2026-03-10 22:58:33,771 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:58:33,771 - app - INFO - S3 event received for object: raw/sensors_20260310T225833.csv
+2026-03-10 22:58:33,771 - app - INFO - Queueing processing task for file: raw/sensors_20260310T225833.csv
+2026-03-10 22:58:33,864 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:58:33,943 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:58:33,944 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:58:34,105 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:58:34,138 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T225833.csv
+2026-03-10 22:58:34,165 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:58:34,165 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:58:34,196 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:58:34,231 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T225833_summary.json
+2026-03-10 22:59:34,300 - app - INFO - SNS message received. Type: Notification
+2026-03-10 22:59:34,300 - app - INFO - S3 event received for object: raw/sensors_20260310T225933.csv
+2026-03-10 22:59:34,301 - app - INFO - Queueing processing task for file: raw/sensors_20260310T225933.csv
+2026-03-10 22:59:34,373 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 22:59:34,486 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 22:59:34,488 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 22:59:34,646 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 22:59:34,680 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T225933.csv
+2026-03-10 22:59:34,709 - baseline - INFO - Baseline successfully saved.
+2026-03-10 22:59:34,709 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 22:59:34,745 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 22:59:34,777 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T225933_summary.json
+2026-03-10 23:00:33,873 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:00:33,873 - app - INFO - S3 event received for object: raw/sensors_20260310T230033.csv
+2026-03-10 23:00:33,873 - app - INFO - Queueing processing task for file: raw/sensors_20260310T230033.csv
+2026-03-10 23:00:33,951 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:00:34,027 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:00:34,028 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:00:34,188 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:00:34,243 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T230033.csv
+2026-03-10 23:00:34,274 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:00:34,274 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:00:34,307 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:00:34,335 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T230033_summary.json
+2026-03-10 23:01:34,495 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:01:34,496 - app - INFO - S3 event received for object: raw/sensors_20260310T230133.csv
+2026-03-10 23:01:34,496 - app - INFO - Queueing processing task for file: raw/sensors_20260310T230133.csv
+2026-03-10 23:01:34,576 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:01:34,691 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:01:34,694 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:01:34,853 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:01:34,885 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T230133.csv
+2026-03-10 23:01:34,913 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:01:34,914 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:01:34,958 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:01:34,992 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T230133_summary.json
+2026-03-10 23:02:34,878 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:02:34,879 - app - INFO - S3 event received for object: raw/sensors_20260310T230233.csv
+2026-03-10 23:02:34,879 - app - INFO - Queueing processing task for file: raw/sensors_20260310T230233.csv
+2026-03-10 23:02:34,951 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:02:35,054 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:02:35,055 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:02:35,214 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:02:35,251 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T230233.csv
+2026-03-10 23:02:35,284 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:02:35,284 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:02:35,328 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:02:35,361 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T230233_summary.json
+2026-03-10 23:03:34,630 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:03:34,630 - app - INFO - S3 event received for object: raw/sensors_20260310T230333.csv
+2026-03-10 23:03:34,630 - app - INFO - Queueing processing task for file: raw/sensors_20260310T230333.csv
+2026-03-10 23:03:34,703 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:03:34,778 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:03:34,779 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:03:34,937 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:03:34,969 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T230333.csv
+2026-03-10 23:03:34,997 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:03:34,997 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:03:35,027 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:03:35,055 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T230333_summary.json
+2026-03-10 23:04:35,143 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:04:35,143 - app - INFO - S3 event received for object: raw/sensors_20260310T230433.csv
+2026-03-10 23:04:35,143 - app - INFO - Queueing processing task for file: raw/sensors_20260310T230433.csv
+2026-03-10 23:04:35,220 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:04:35,308 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:04:35,309 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:04:35,470 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:04:35,504 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T230433.csv
+2026-03-10 23:04:35,535 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:04:35,535 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:04:35,581 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:04:35,613 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T230433_summary.json
+2026-03-10 23:05:34,753 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:05:34,753 - app - INFO - S3 event received for object: raw/sensors_20260310T230533.csv
+2026-03-10 23:05:34,753 - app - INFO - Queueing processing task for file: raw/sensors_20260310T230533.csv
+2026-03-10 23:05:34,825 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:05:34,897 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:05:34,898 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:05:35,056 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:05:35,088 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T230533.csv
+2026-03-10 23:05:35,116 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:05:35,116 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:05:35,163 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:05:35,191 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T230533_summary.json
+2026-03-10 23:06:35,260 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:06:35,260 - app - INFO - S3 event received for object: raw/sensors_20260310T230634.csv
+2026-03-10 23:06:35,260 - app - INFO - Queueing processing task for file: raw/sensors_20260310T230634.csv
+2026-03-10 23:06:35,338 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:06:35,433 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:06:35,434 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:06:35,594 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:06:35,626 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T230634.csv
+2026-03-10 23:06:35,655 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:06:35,656 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:06:35,690 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:06:35,724 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T230634_summary.json
+2026-03-10 23:07:34,987 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:07:34,987 - app - INFO - S3 event received for object: raw/sensors_20260310T230734.csv
+2026-03-10 23:07:34,987 - app - INFO - Queueing processing task for file: raw/sensors_20260310T230734.csv
+2026-03-10 23:07:35,062 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:07:35,133 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:07:35,134 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:07:35,294 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:07:35,329 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T230734.csv
+2026-03-10 23:07:35,359 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:07:35,359 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:07:35,387 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:07:35,418 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T230734_summary.json
+2026-03-10 23:08:35,276 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:08:35,276 - app - INFO - S3 event received for object: raw/sensors_20260310T230834.csv
+2026-03-10 23:08:35,276 - app - INFO - Queueing processing task for file: raw/sensors_20260310T230834.csv
+2026-03-10 23:08:35,351 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:08:35,459 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:08:35,460 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:08:35,618 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:08:35,647 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T230834.csv
+2026-03-10 23:08:35,675 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:08:35,675 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:08:35,744 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:08:35,772 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T230834_summary.json
+2026-03-10 23:09:34,990 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:09:34,990 - app - INFO - S3 event received for object: raw/sensors_20260310T230934.csv
+2026-03-10 23:09:34,990 - app - INFO - Queueing processing task for file: raw/sensors_20260310T230934.csv
+2026-03-10 23:09:35,060 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:09:35,135 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:09:35,136 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:09:35,296 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:09:35,343 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T230934.csv
+2026-03-10 23:09:35,374 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:09:35,374 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:09:35,410 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:09:35,435 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T230934_summary.json
+2026-03-10 23:10:35,495 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:10:35,496 - app - INFO - S3 event received for object: raw/sensors_20260310T231034.csv
+2026-03-10 23:10:35,496 - app - INFO - Queueing processing task for file: raw/sensors_20260310T231034.csv
+2026-03-10 23:10:35,568 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:10:35,659 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:10:35,661 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:10:35,822 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:10:35,856 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T231034.csv
+2026-03-10 23:10:35,918 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:10:35,918 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:10:35,949 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:10:35,991 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T231034_summary.json
+2026-03-10 23:11:35,251 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:11:35,251 - app - INFO - S3 event received for object: raw/sensors_20260310T231134.csv
+2026-03-10 23:11:35,251 - app - INFO - Queueing processing task for file: raw/sensors_20260310T231134.csv
+2026-03-10 23:11:35,325 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:11:35,405 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:11:35,406 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:11:35,559 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:11:35,587 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T231134.csv
+2026-03-10 23:11:35,632 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:11:35,633 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:11:35,662 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:11:35,719 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T231134_summary.json
+2026-03-10 23:12:35,681 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:12:35,682 - app - INFO - S3 event received for object: raw/sensors_20260310T231234.csv
+2026-03-10 23:12:35,682 - app - INFO - Queueing processing task for file: raw/sensors_20260310T231234.csv
+2026-03-10 23:12:35,754 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:12:35,824 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:12:35,825 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:12:35,978 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:12:36,012 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T231234.csv
+2026-03-10 23:12:36,043 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:12:36,043 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:12:36,074 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:12:36,108 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T231234_summary.json
+2026-03-10 23:13:35,204 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:13:35,204 - app - INFO - S3 event received for object: raw/sensors_20260310T231334.csv
+2026-03-10 23:13:35,204 - app - INFO - Queueing processing task for file: raw/sensors_20260310T231334.csv
+2026-03-10 23:13:35,282 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:13:35,425 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:13:35,426 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:13:35,585 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:13:35,615 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T231334.csv
+2026-03-10 23:13:35,647 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:13:35,647 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:13:35,678 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:13:35,708 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T231334_summary.json
+2026-03-10 23:14:35,571 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:14:35,571 - app - INFO - S3 event received for object: raw/sensors_20260310T231434.csv
+2026-03-10 23:14:35,571 - app - INFO - Queueing processing task for file: raw/sensors_20260310T231434.csv
+2026-03-10 23:14:35,646 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:14:35,756 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:14:35,757 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:14:35,915 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:14:35,944 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T231434.csv
+2026-03-10 23:14:35,979 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:14:35,980 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:14:36,011 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:14:36,042 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T231434_summary.json
+2026-03-10 23:15:35,898 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:15:35,898 - app - INFO - S3 event received for object: raw/sensors_20260310T231534.csv
+2026-03-10 23:15:35,898 - app - INFO - Queueing processing task for file: raw/sensors_20260310T231534.csv
+2026-03-10 23:15:35,975 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:15:36,047 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:15:36,048 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:15:36,208 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:15:36,246 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T231534.csv
+2026-03-10 23:15:36,310 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:15:36,310 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:15:36,347 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:15:36,433 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T231534_summary.json
+2026-03-10 23:16:35,437 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:16:35,437 - app - INFO - S3 event received for object: raw/sensors_20260310T231634.csv
+2026-03-10 23:16:35,437 - app - INFO - Queueing processing task for file: raw/sensors_20260310T231634.csv
+2026-03-10 23:16:35,514 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:16:35,597 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:16:35,598 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:16:35,758 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:16:35,791 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T231634.csv
+2026-03-10 23:16:35,825 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:16:35,826 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:16:35,912 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:16:35,968 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T231634_summary.json
+2026-03-10 23:17:36,119 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:17:36,119 - app - INFO - S3 event received for object: raw/sensors_20260310T231735.csv
+2026-03-10 23:17:36,119 - app - INFO - Queueing processing task for file: raw/sensors_20260310T231735.csv
+2026-03-10 23:17:36,194 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:17:36,273 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:17:36,274 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:17:36,429 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:17:36,465 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T231735.csv
+2026-03-10 23:17:36,500 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:17:36,500 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:17:36,539 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:17:36,569 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T231735_summary.json
+2026-03-10 23:18:35,944 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:18:35,944 - app - INFO - S3 event received for object: raw/sensors_20260310T231835.csv
+2026-03-10 23:18:35,945 - app - INFO - Queueing processing task for file: raw/sensors_20260310T231835.csv
+2026-03-10 23:18:36,025 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:18:36,103 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:18:36,104 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:18:36,267 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:18:36,304 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T231835.csv
+2026-03-10 23:18:36,339 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:18:36,339 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:18:36,378 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:18:36,421 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T231835_summary.json
+2026-03-10 23:19:36,495 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:19:36,496 - app - INFO - S3 event received for object: raw/sensors_20260310T231935.csv
+2026-03-10 23:19:36,496 - app - INFO - Queueing processing task for file: raw/sensors_20260310T231935.csv
+2026-03-10 23:19:36,570 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:19:36,639 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:19:36,640 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:19:36,793 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:19:36,837 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T231935.csv
+2026-03-10 23:19:36,872 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:19:36,872 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:19:36,932 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:19:36,965 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T231935_summary.json
+2026-03-10 23:20:36,308 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:20:36,308 - app - INFO - S3 event received for object: raw/sensors_20260310T232035.csv
+2026-03-10 23:20:36,308 - app - INFO - Queueing processing task for file: raw/sensors_20260310T232035.csv
+2026-03-10 23:20:36,386 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:20:36,476 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:20:36,478 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:20:36,631 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:20:36,733 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T232035.csv
+2026-03-10 23:20:36,762 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:20:36,762 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:20:36,794 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:20:36,831 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T232035_summary.json
+2026-03-10 23:21:36,845 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:21:36,845 - app - INFO - S3 event received for object: raw/sensors_20260310T232135.csv
+2026-03-10 23:21:36,845 - app - INFO - Queueing processing task for file: raw/sensors_20260310T232135.csv
+2026-03-10 23:21:36,915 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:21:36,992 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:21:36,993 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:21:37,149 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:21:37,183 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T232135.csv
+2026-03-10 23:21:37,211 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:21:37,212 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:21:37,246 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:21:37,273 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T232135_summary.json
+2026-03-10 23:22:36,686 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:22:36,686 - app - INFO - S3 event received for object: raw/sensors_20260310T232235.csv
+2026-03-10 23:22:36,686 - app - INFO - Queueing processing task for file: raw/sensors_20260310T232235.csv
+2026-03-10 23:22:36,761 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:22:36,840 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:22:36,842 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:22:36,995 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:22:37,034 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T232235.csv
+2026-03-10 23:22:37,065 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:22:37,065 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:22:37,100 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:22:37,129 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T232235_summary.json
+2026-03-10 23:23:36,293 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:23:36,293 - app - INFO - S3 event received for object: raw/sensors_20260310T232335.csv
+2026-03-10 23:23:36,293 - app - INFO - Queueing processing task for file: raw/sensors_20260310T232335.csv
+2026-03-10 23:23:36,372 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:23:36,477 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:23:36,478 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:23:36,634 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:23:36,666 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T232335.csv
+2026-03-10 23:23:36,698 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:23:36,698 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:23:36,740 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:23:36,773 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T232335_summary.json
+2026-03-10 23:24:36,909 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:24:36,910 - app - INFO - S3 event received for object: raw/sensors_20260310T232435.csv
+2026-03-10 23:24:36,910 - app - INFO - Queueing processing task for file: raw/sensors_20260310T232435.csv
+2026-03-10 23:24:36,985 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:24:37,058 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:24:37,060 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:24:37,217 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:24:37,254 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T232435.csv
+2026-03-10 23:24:37,286 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:24:37,286 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:24:37,317 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:24:37,347 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T232435_summary.json
+2026-03-10 23:25:36,764 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:25:36,764 - app - INFO - S3 event received for object: raw/sensors_20260310T232535.csv
+2026-03-10 23:25:36,764 - app - INFO - Queueing processing task for file: raw/sensors_20260310T232535.csv
+2026-03-10 23:25:36,841 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:25:36,924 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:25:36,925 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:25:37,080 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:25:37,110 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T232535.csv
+2026-03-10 23:25:37,137 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:25:37,137 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:25:37,173 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:25:37,226 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T232535_summary.json
+2026-03-10 23:26:37,127 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:26:37,127 - app - INFO - S3 event received for object: raw/sensors_20260310T232635.csv
+2026-03-10 23:26:37,127 - app - INFO - Queueing processing task for file: raw/sensors_20260310T232635.csv
+2026-03-10 23:26:37,202 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:26:37,294 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:26:37,295 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:26:37,450 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:26:37,486 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T232635.csv
+2026-03-10 23:26:37,514 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:26:37,514 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
+2026-03-10 23:26:37,573 - baseline - INFO - Log file successfully synced to S3.
+2026-03-10 23:26:37,605 - processor - INFO - Processing summary written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T232635_summary.json
+2026-03-10 23:27:36,805 - app - INFO - SNS message received. Type: Notification
+2026-03-10 23:27:36,806 - app - INFO - S3 event received for object: raw/sensors_20260310T232735.csv
+2026-03-10 23:27:36,806 - app - INFO - Queueing processing task for file: raw/sensors_20260310T232735.csv
+2026-03-10 23:27:36,875 - processor - INFO - Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-10 23:27:36,969 - baseline - INFO - Baseline successfully loaded.
+2026-03-10 23:27:36,970 - detector - INFO - Running anomaly detection using method='both' on 100 rows.
+2026-03-10 23:27:37,123 - detector - INFO - Anomaly detection completed successfully.
+2026-03-10 23:27:37,154 - processor - INFO - Processed CSV written to s3://anomaly-detection-692859947454-us-east-1/processed/sensors_20260310T232735.csv
+2026-03-10 23:27:37,181 - baseline - INFO - Baseline successfully saved.
+2026-03-10 23:27:37,181 - baseline - INFO - Uploading log file to s3://anomaly-detection-692859947454-us-east-1/logs/anomaly_detection.log
