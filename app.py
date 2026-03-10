@@ -13,7 +13,7 @@ from processor import process_file
 
 # ── Logging Setup ────────────────────────────────────────────────────────────
 
-LOG_FILE = "/var/log/anomly_detection.log"
+LOG_FILE = "/var/log/anomaly_detection.log"
 
 logging.basicConfig(
     level=logging.INFO,
